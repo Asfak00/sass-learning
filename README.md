@@ -20,7 +20,7 @@ Sass ডিজাইন করেছেন Hampton Catlin এবং ডেভে
 
 হচ্ছে ( live Sass compile ).
 
-যে আমরা যখন Sass ব্যবহার করবো তখন মাইলের extension টি হবে ( style.scss ) আর এই ফাইলকে যখন আমরা html ফাইল এর সাথে link করতে চাইলো তখন সবসময় না সাধারণভাবে আমরা যেভাবে style ফাইল link পারি ঠিক ওই ভাবে করবো। কিন্তু মনে রাখতে হবে html ফাইলে যখন Sass ফাইল link করবো তখন Sass ফাইলের extension .css দিবো মানে s দিবো না ।
+> যে আমরা যখন Sass ব্যবহার করবো তখন মাইলের extension টি হবে ( style.scss ) আর এই ফাইলকে যখন আমরা html ফাইল এর সাথে link করতে চাইলো তখন সবসময় না সাধারণভাবে আমরা যেভাবে style ফাইল link পারি ঠিক ওই ভাবে করবো। কিন্তু মনে রাখতে হবে html ফাইলে যখন Sass ফাইল link করবো তখন Sass ফাইলের extension .css দিবো মানে s দিবো না ।
 
 সবার শেষে Sass ফাইল থেকে style এর আউটপুট পেতে watch sass বলে একটা button থাকবে vs code এর নিচের মেনুবারে ওইখানে click করে Sass ফাইলটিকে watch করাতে হবে।
 
