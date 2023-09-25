@@ -1,1 +1,25 @@
-# Sass
+# SASS কী?
+
+### Sass এর পুনরূপ :
+
+SASS = <b>S</b>yntactically <b>A</b>wesome <b>S</b>yle <b>S</b>heet.
+
+=> Sass হচ্ছে css এর একটি extension.
+
+Sass ডিজাইন করেছেন Hampton Catlin এবং ডেভেলপ করেছেন Nataile Weizenbaum আর ২০০৬ সালে প্রকাশ করা হয়েছিলো।
+
+### কেন আমরা Sass ব্যবহার করবো
+
+=> Sass এর মধ্যে অনেক extra জিনিস রয়েছে যা দিয়ে খুব সহজে স্টাইল এর কাজ করতে পারবো। আর যেহেতু Sass হচ্ছে css এর একটি extension তাই Sass এর মধ্যে যা কিছু ব্যবহার করা হবে সেটা sass রিলেটেড হবে। Sass ব্যবহার করণে আমরা একই style কে পার যার repeat করার বিয়োজন হয় না। Sass ব্যবহার করে কোডকে Simple করবে ও কোডকে maintable করবে।
+
+# SASS USE
+
+### Sass কীভাবে ব্যবহার করা যায় ?
+
+=> Sass ব্যবহার করতে গেলে আমাদের একটি extension এর প্রয়োজন হবে (vs code) এ সেটা
+
+হচ্ছে ( live Sass compile ).
+
+যে আমরা যখন Sass ব্যবহার করবো তখন মাইলের extension টি হবে ( style.scss ) আর এই ফাইলকে যখন আমরা html ফাইল এর সাথে link করতে চাইলো তখন সবসময় না সাধারণভাবে আমরা যেভাবে style ফাইল link পারি ঠিক ওই ভাবে করবো। কিন্তু মনে রাখতে হবে html ফাইলে যখন Sass ফাইল link করবো তখন Sass ফাইলের extension .css দিবো মানে s দিবো না ।
+
+সবার শেষে Sass ফাইল থেকে style এর আউটপুট পেতে watch sass বলে একটা button থাকবে vs code এর নিচের মেনুবারে ওইখানে click করে Sass ফাইলটিকে watch করাতে হবে।
