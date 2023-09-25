@@ -1,0 +1,10 @@
+/* css reset code */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body h1 {
+  color: red;
+}/*# sourceMappingURL=style.css.map */
