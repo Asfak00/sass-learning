@@ -88,7 +88,12 @@ nav {
 # Sass এর ফোল্ডার stacture
 
 ```file
-app
+App
+  Js
+    index.js
+  Scss
+    main.scss
+  index.html
 ```
 
 # Edit your " live sass compile " settings
