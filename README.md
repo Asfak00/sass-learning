@@ -85,15 +85,51 @@ nav {
 
 <b>Official Sass Docs For Nesting - </b>https://sass-lang.com/guide/#nesting
 
-# Sass এর ফোল্ডার stacture
+# Partials
 
-```file
-App
-  Js
-    index.js
-  Scss
-    main.scss
-  index.html
+partial এর মাধ্যমে আমরা কোডকে সেপারেট করতে পারি ছোট ছোট কিছু ফাইলের মাধ্যমে যেটা আমরা পরবর্তীতে যেকোনো জায়গায় ব্যবহার করতে পারবো। partial এর মাধ্যমে আপনি আপনার যেকোনো কোডকে আলাদা ফাইলে রেখে সেখান থেকে import করার মাধ্যমে ব্যবহার করতে পারবেন এতে করে আপনি কোনো কোড তাড়াতাড়ি খুজে পাবেন এবং আপনি কখনো যদি চান কোনো কোডে কিছু পরিবর্তন করতে তাহলে তা খুব সহজেই করতে পারবেন।
+
+### partial ফাইল নাম দেওয়ার নিয়মঃ
+
+```scss
+_file_name.scss
+```
+
+> উপরে ( _ ) দেওয়া বাধ্যতামুলক যখন আপনি একটি partial ফাইল তৈরি করতে চাচ্ছেন তখন। ( _ ) দেয়ার পর আপনি আপনার partial ফাইলের নাম দিবেন এবং ফাইলের extension হিসেবে আপনি ( .scss ) ব্যবহার করবেন।
+
+### partial ফাইল অ্যাক্সেস করার নিয়মঃ
+
+```scss
+@forward "path_name";
+```
+
+> উপরে ( @forward ) দিয়েই আপনি আপনার partial ফাইলটি অ্যাক্সেস করতে পারবেন এবং হে অবশ্যই আপনাকে আপনার partial ফাইলের ( path ) টি বলে দিতে হবে যা @forward এর পরে হবে " " এর মধ্যে।
+
+### আরেকটা উপায়ের মাধ্যমে আপনি সবসময় আপনার মেইন sass ফাইলে @forward লিখা থেকে বাচতে পারবেন।
+
+আপনি \_index.scss নামে একটা ফাইল বানাই নিতে পারেন এবং ওই ফাইলের মধ্যে আপনার যত patial ফাইল রয়েছে সবগুলোকে @forward ব্যবহার করে import করে ফেলবেন।
+তারপর আপনি আপনার মেইন যে sass ফাইল রয়েছে সেটাতে গিয়ে শুধু ওই \_index.scss ফাইলটি @forward এর মাধ্যমে import করে নিলেই কিন্তু আপনি আপনার সব partial কোড ও ফাইল পেয়ে যাবেন আপনি যেখানে চান সেখানে ব্যবহার করতে পারবেন।
+
+### আর আপনি যদি কোনো partial ফাইল থেকে আলাদা আলাদা করে কিছু import করতে চান তাহলে আপনি যখন ওই partial ফাইলটি import করবেন তখন @forward এর পরিবর্তে @use ব্যবহার করবেন এবং যখন আপনি @use ব্যাবহার করবেন তখন কিন্তু আপনি আলাদা আলদা ভাবে আপনার partial ফাইল থেকে যেকোনো variable, mixing etc অ্যাক্সেস করতে পাড়বেন। যখন আপনি কোনো একটা জিনিস ওই partial থেকে অ্যাক্সেস করতে যাবেন তখন আপনাকে ওই partial ফাইলের নাম লিখে ( . ) দিতে হবে এবং পরে আপনার ওই কাংকিত ফাইলের অথবা variable or mixing এর নাম লিখতে হবে।
+
+### উদাহরণ
+
+This file make in another folder
+
+```scss
+$header_text: white;
+$bg_color: red;
+```
+
+when I want to use it any file in individually
+
+```scss
+@use "./file_location;
+
+body {
+  background-color: file_location.$bg_color;
+  color: file_location.$header_text;
+}
 ```
 
 # Edit your " live sass compile " settings
@@ -106,4 +142,18 @@ App
       "savePath": "/dist"
     }
   ]
+```
+
+# Sass এর ফোল্ডার stacture
+
+```file
+> App
+
+  > Js - ( all js files in here )
+      index.js
+
+  > Scss - ( all scss files in here )
+      main.scss
+
+  index.html - ( our main html file is here )
 ```

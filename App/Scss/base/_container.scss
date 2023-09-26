@@ -1,0 +1,19 @@
+@use "../Util/index";
+
+.container {
+  width: 30%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: index.$container_bg;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  color: index.$header_text;
+  cursor: pointer;
+}
+
+.container:hover {
+  transform: scale(1.1);
+}
