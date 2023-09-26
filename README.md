@@ -132,6 +132,10 @@ body {
 }
 ```
 
+<b>Official Sass Docs For Partial - </b>https://sass-lang.com/guide/#partials
+
+<b>Official Sass Docs For Modules - </b>https://sass-lang.com/guide/#modules
+
 # Edit your " live sass compile " settings
 
 ```json
