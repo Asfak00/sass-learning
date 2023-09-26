@@ -43,6 +43,8 @@ $variable_name: value;
 
 > variable এর মাধ্যমে একই জিনিস অনেক জায়গায় ব্যবহার করতে পারবো এতে করে কোড repeat করা লাগবে না। আর যখন কোডে কোনো পরিবর্তন করার প্রয়োজন হবে তখন শুধু variable এর মধ্যে পরিবর্তন করলে সব জায়গায় পরিবর্তন হয়ে যাবে।
 
+<b>Official Sass Docs For Variable - </b> https://sass-lang.com/guide/#variables
+
 # Nesting
 
 Nesting শব্দটার মধ্যেই রয়েছে এর অর্থ রয়েছে। nesting এর মাধ্যমে আমরা কোডকে অনেক simple করতে পারবো।
