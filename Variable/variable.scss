@@ -1,0 +1,15 @@
+// variables
+$textColor: rgb(255, 255, 255);
+$bgColor: rgb(0, 152, 253);
+
+body {
+  background-color: $bgColor;
+}
+
+h1 {
+  color: $textColor;
+}
+
+p {
+  color: $textColor;
+}

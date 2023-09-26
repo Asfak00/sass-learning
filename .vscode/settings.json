@@ -1,0 +1,11 @@
+{
+  "liveSassCompile.settings.forceBaseDirectory": "",
+  "liveSassCompile.settings.includeItems": [],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".css",
+      "savePath": "/dist"
+    }
+  ]
+}

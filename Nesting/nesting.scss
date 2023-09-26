@@ -1,0 +1,14 @@
+// variables
+$textColor: rgb(0, 0, 0);
+$bgColor: rgb(108, 233, 255);
+
+// nesting in sass
+body {
+  background-color: $bgColor;
+  h1 {
+    color: $textColor;
+  }
+  p {
+    color: $textColor;
+  }
+}
