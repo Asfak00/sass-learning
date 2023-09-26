@@ -83,6 +83,8 @@ nav {
 
 ### তাহলে বুঝা গেলো যে nesting ব্যবহার করে আমরা কোডকে অনেক simple করে ফেলতে পারবো এবং তা বুঝতেও সুবিধা হবে। আর nesting ব্যাবহার করার ফলে আমাদের কিন্তু বার বার nav nav লিখতে হয় নি এবং কোনো ট্যাগ repeat করতে হয় নি।
 
+<b>Official Sass Docs For Nesting - </b>https://sass-lang.com/guide/#nesting
+
 # Sass এর ফোল্ডার stacture
 
 # Edit your " live sass compile " settings
