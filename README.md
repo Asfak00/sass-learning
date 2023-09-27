@@ -188,16 +188,105 @@ mixin এর মধ্যে আমরা কিছু css কোড রাখ�
   ]
 ```
 
+</br>
+
 # Sass এর ফোল্ডার stacture
 
-```file
-> App
+### for small project
 
-  > Js - ( all js files in here )
-      index.js
+<ul>
+ <li><b>_base.scss</b> -> (boiler plate codes) can includes reset, variables, mixins and utility classes.</li>
+ <li><b>_layout.scss</b> -> layout such as container, grid systems etc.</li>
+ <li><b>_component.scss</b> -> reusable things like buttons, cards, navbar etc.</li>
+ <li><b>main.scss</b> -> it should ONLY contain the imports from other files.</li>
 
-  > Scss - ( all scss files in here )
-      main.scss
+</ul>
 
-  index.html - ( our main html file is here )
-```
+### for a medium to large project follow 7-1 pattern (7 folders 1 file)
+
+<ul>
+ <li><b>SASS folder</b>
+ <ul>
+<li>  <b>abstracts / utilities folder</b></li>
+  <ul>
+  <li><b>_index.scss </b>-> forwarding all others file in this folder</li>
+
+  <li><b>_variables.scss</b></li>
+
+  <li><b>_functions.scss</b></li>
+
+  <li><b>_mixins.scss</b></li>
+
+  </ul>
+  <li>  <b>abstracts / utilities folder</b>
+
+  <ul>
+  <li><b>_index.scss </b>-> forwarding all others file in this folder</li>
+
+  <li><b>_reset.scss</b></li>
+
+  <li><b>_typography.scss</b></li>
+  </ul></li>
+
+   <li>  <b>components/modules folder
+</b>
+
+  <ul>
+  <li><b>_index.scss</b> -> forwarding all others file in this folder
+</li>
+
+  <li><b>_buttons.scss
+</b></li>
+
+  <li><b>_slider.scss</b></li>
+  <li><b>_cards.scss</b></li>
+  <li><b>_navbar.scss</b></li>
+  </ul></li>
+
+   <li>  <b>layout folder</b>
+
+  <ul>
+  <li><b>_index.scss</b> -> forwarding all others file in this folder</li>
+
+  <li><b>_navigation.scss</b></li>
+
+  <li><b>_grid.scss</b></li>
+  <li><b>_header.scss</b></li>
+  <li><b>_footer.scss</b></li>
+  <li><b>_sidebar.scss</b></li>
+  <li><b>_forms.scss</b></li>
+  </ul></li>
+
+   <li>  <b>pages folder</b>
+
+  <ul>
+  <li><b>_index.scss</b> -> forwarding all others file in this folder</li>
+
+  <li><b>_home.scss</b></li>
+
+  <li><b>_contact.scss</b></li>
+  <li><b>_about.scss</b></li>
+  <li><b>_courses.scss</b></li>
+
+  </ul></li>
+
+   <li>  <b>themes folder</b>
+
+  <ul>
+  <li><b>_index.scss</b> -> forwarding all others file in this folder</li>
+  <li><b>_theme.scss</b></li>
+  <li><b>_admin.scss</b></li>
+  </ul></li>
+
+   <li>  <b>vendors folder</b>
+
+  <ul>
+  <li><b>_index.scss</b>_index.scss -> forwarding all others file in this folder</li>
+  <li><b>_bootstrap.scss</b></li>
+  <li><b>_jquery-ui.scss</b></li>
+  </ul></li>
+ </ul>
+ </li>
+
+ <li><b>main.scss file</b></li>
+</ul>
