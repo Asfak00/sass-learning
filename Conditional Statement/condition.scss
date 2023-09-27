@@ -1,0 +1,17 @@
+// creating a mixin
+@mixin setFontSize($value) {
+  @if ($value == "small") {
+    font-size: 10px;
+  } @else if ($value == "medium") {
+    font-size: 20px;
+  } @else if ($value == "large") {
+    font-size: 40px;
+  } @else {
+    font-size: 5px;
+  }
+}
+
+// applying mixin in h1 tag
+h1 {
+  @include setFontSize(medium);
+}
