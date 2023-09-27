@@ -136,6 +136,46 @@ body {
 
 <b>Official Sass Docs For Modules - </b>https://sass-lang.com/guide/#modules
 
+# Mixin
+
+mixin এর মধ্যে আমরা কিছু css কোড রাখতে পারবো যা পরবর্তীতে যেকোনো স্টাইলসিটে reuse করতে পারবো। mixin ব্যবহার করলে আমরা একই কোড বার বার লেখার প্রয়োজন নেই। মানে আমরা এমন একটা স্টাইল করতে চাচ্ছি যেটা অনেক জায়গায় ব্যবহার করার প্রয়োজন হতে পারে, এক্ষেত্রে আমরা একই কোড বার বার না লিখে একটি mixin তৈরি করে সেটার মধ্যে রাখতে পারি এবং আমাদের ওই স্টাইলটি যেখানে যেখানে প্রয়োজন ওইখানে এই mixin ব্যবহার করে স্টাইল apply করতে পারবো।
+
+<b>mixin এর আরেকটা বড় সুবিধা হচ্ছে এতে আমরা কোনো প্রপার্টির জন্য ডায়নামিক value আনতে পারবো এবং সেটা mixin এ বসাতে পারবো।</b>
+
+### initialize mixin in sass file
+
+```scss
+@mixin mixin_name {
+  your_style_here.....
+}
+```
+
+### use mixin in any stylesheet
+
+```scss
+@include mixin_name;
+```
+
+> উপরে যেটা উদাহরণ দেখলাম সেটা হচ্ছে নরমাল ভাবে আমরা একটা mixin declear করলাম এবং সেটা একটা স্টাইল ফাইলে ব্যবহার করলাম।
+
+### mixin initialize with dynamic value receive
+
+```scss
+@mixin mixin_name($font_size,$text_color) {
+  your_style_here.....
+}
+```
+
+> আমরা যখন mixin এ কোনো parameter receive করতে যাবো তখন $ ( ডলার ) চিহ্ন দেয়ার পর আমাদের parameter যে নামে ধরতে চাই ওই নাম দিবো। এবং আমরা এই parameter আকারে যত খুশি তত parameter গ্রহণ করতে পারবো ডায়নামিক ভাবে।
+
+### mixin use in our stylesheet with given some parameter
+
+```scss
+@include mixin_name(10px, red);
+```
+
+> মনে রাখতে হবে আমরা যখন mixin এ parameter টি receive করছিলাম তখন যে order এ parameter টিকে receive করেছিলাম ঠিক সেইম order এ আমরা যখন mixin এ value pass করবো তখন value গুলো দিতে হবে এবং value দেয়ার সময় আমাদের $ ( ডলার ) সাইন দিতে হবে না শুধু value টি দিলেই হবে।
+
 # Edit your " live sass compile " settings
 
 ```json

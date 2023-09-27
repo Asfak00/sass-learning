@@ -1,0 +1,30 @@
+// without receive any parameter in mixin
+@mixin para_style {
+  font-size: 0.8rem;
+  color: red;
+}
+
+// apply mixin in our html tag
+.firstP {
+  @include para_style;
+}
+
+.secondP {
+  @include para_style;
+}
+
+// with receive parameter in mixin
+
+@mixin header_text($font_size, $color) {
+  font-size: $font_size;
+  color: $color;
+}
+
+// apply mixin in our html tag
+h1 {
+  @include header_text(3rem, black);
+}
+
+h3 {
+  @include header_text(4rem, orange);
+}
