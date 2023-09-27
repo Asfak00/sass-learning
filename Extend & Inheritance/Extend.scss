@@ -1,0 +1,13 @@
+.name-input {
+  border: 1px solid gray;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+// using extend to get " name.input " selector
+.email-input {
+  @extend .name-input;
+  background-color: rgb(185, 250, 255);
+}
