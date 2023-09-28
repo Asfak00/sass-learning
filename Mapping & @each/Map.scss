@@ -1,0 +1,19 @@
+// without mapping applying sass @each to get multiple color like loop
+// @each $colors in blue, red, green {
+//   .#{$colors}-text {
+//     color: $colors;
+//   }
+// }
+
+// now using map for get one by one color in our color property
+$colors: (
+  color1: red,
+  color2: blue,
+  color3: green,
+);
+
+@each $key, $color in $colors {
+  .#{$color}-text {
+    color: $color;
+  }
+}
