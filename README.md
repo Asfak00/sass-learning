@@ -236,6 +236,39 @@ Conditional Statement বলতে বুঝানো হয়েছে ( if, else
 
 > উপরে আমরা condition এর মাধ্যমে বলেছি যে আমাদের value সমান সমান যদি small, medium, large কোনোটি হয় তাহলে আমরা যে কাজগুলো করতে বলেছি ওই কাজ করবে ( মানে ফন্ট সাইজ ছোট অথবা বড় করবে )। আর যদি কোনো value দেওয়া না হয় তাহলে আমাদের else কাজ করবে। এভাবে আমরা if, else ব্যবহার করে যেকোনো condition চেক করতে পারবো। আমি তো শুধু font size দিয়ে উদাহরণ দেখালাম কিন্তু এই if, else আপনি যেকোনো condition এ ব্যবহার করতে পারবেন।
 
+<b>Official Sass Docs For if, else condition - </b><b>Official Sass Docs For Partial - </b>https://sass-lang.com/guide/#partials
+
+# For & While Loop
+
+আমরা যদি JS শিখে থাকি তাহলে অবশ্যই আমরা For Loop এবং While Loop সম্পর্কে জানা হয়ে গেছে যে এগুলা কি কাজ করে।
+কিন্তু আমরা যখন এই Loop গুলো Sass এ ব্যবহার করবো তখন সবকিছুই ঠিক থাকবে শুধু Stacture টি পরিবর্তন হবে। আর এটা For Loop ও While Loop এর ক্ষেত্রে হবে।
+
+### For Loop Stacture In Sass
+
+```scss
+@for %x from 1 through 12 {
+  // logic here
+}
+```
+
+> উপরে আমরা যে @for দিয়েছি সেটা হচ্ছে For loop শুরু করার keyword এর পরে আমরা যে $x দিয়েছি সেটা হচ্ছে একটি variable এবং আমরা এই variable এর মাধ্যমে বুঝতে পারবো যে আমাদের loop টি কত সংখ্যায় আসছে তারপর আমরা যে 1 through 12 লিখলাম এর মানে হচ্ছে আমরা বলছি যে আমাদের loop টি 1 থেকে 12 পর্যন্ত চালাউ, এখানে আমরা আরেকটা শব্দ ব্যাবহার করতে পারতাম through এর বদলে সেটা হচ্ছে To আর এটা যদি ব্যবহার করতাম তাহলে আমাদের loop টি 1 থেকে 11 পর্যন্ত চলত ( মানে এক কম চলত )। যার জন্য আমরা যদি চাই যে আমাদের loop আমরা যা সংখ্যা দিবো একবারে ওই সংখ্যা পর্যন্ত চলবে তাহলে আমরা through ব্যবহার করতে পারি আর যদি চাই যে এক কম চলবে তাহলে আমরা To ব্যবহার করতে পারি।
+
+### While Loop Stacture In Sass
+
+```scss
+// declear a variable before write while loop
+$x: 1;
+
+@while $x < 13 {
+  // logic here
+
+  // increment variable data
+  $x: $x + 1;
+}
+```
+
+> উপরে আমরা প্রথমে একটা variable ডিক্লেয়ার করলাম। পরে আমাদের while loop শুরু করলাম। এবং সেইম for loop এর মত প্রথমে একটা @while নামে keyword দিলাম পরে আমাদের সেই ডিক্লেয়ার করা variable টি দিলাম এবং operator এর মাধ্যমে বলে দিলাম যে 13 পর্যন্ত চলবে আমদের loop টি কিন্তু শুরু হবে কত থেকে? হে, শুরু হবে ( $x ) নামের variable এ যত value দেয়া থাকবে তত থেকে। এখন আমরা তো আমাদের loop চালালাম কিন্তু loop এক এক করে বাড়বে? উত্তর না। কারণ আমরা এখনও ওই কোডটি লেখি নি। আর ওই কোডটি আমরা while loop এর মধ্যে নিচে লেখবো আমাদের সব logic পরে। আর সেটা stacture এ দেখানো হয়েছে।
+
 # Edit your " live sass compile " settings
 
 ```json

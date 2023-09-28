@@ -1,0 +1,13 @@
+// for loop
+@for $x from 1 through 12 {
+  // logic here
+}
+
+// while loop
+
+$x: 1;
+@while $x < 13 {
+  // logic here
+
+  $x: $x + 1;
+}
