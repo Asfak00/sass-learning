@@ -2,7 +2,7 @@
 
 ### Sass এর পুনরূপ :
 
-SASS = <b>S</b>yntactically <b>A</b>wesome <b>S</b>yle <b>S</b>heet.
+SASS = <b>S</b>yntactically <b>A</b>wesome <b>S</b>tyle <b>S</b>heet.
 
 => Sass হচ্ছে css এর একটি extension.
 
